@@ -1,4 +1,6 @@
-export default function Code({ children }) {
+import { ReactNode } from 'react'
+
+export default function Code({ children }: { children: ReactNode }) {
   return (
     <code className="inline-flex items-center space-x-4 rounded-lg bg-gray-800 p-2 pl-4 text-left text-sm text-white sm:text-sm">
       <span className="flex gap-4">
