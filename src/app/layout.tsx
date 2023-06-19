@@ -17,7 +17,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body
-        className={`${roboto.variable} flex bg-gray-900 font-sans text-gray-100`}
+        className={`${roboto.variable} flex bg-gray-100 dark:bg-gray-900 font-sans text-gray-900 dark:text-gray-100`}
       >
         <div className="h-[100vh] w-1/2 ">
           {/* Left */}
