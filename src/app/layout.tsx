@@ -10,7 +10,7 @@ const roboto = Roboto({ subsets: ['latin'], variable: '--font-roboto' })
 export const metadata = {
   title: 'Inicializar uma RaspBerry através de uma Rede',
   description:
-    'Uma documentação completa sobre como Inicializar uma RaspBerry através de uma Rede construída com React, Next.js, TailwindCSS e Typescript.',
+    'Uma documentação completa sobre como Inicializar uma RaspBerry através de uma Rede construída com Next.js, TailwindCSS, Typescript powered by Vercel',
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
