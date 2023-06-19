@@ -32,8 +32,8 @@ export default function Phase3() {
           Se estiver a enfrentar problemas, esta secção pode ajudá-lo. A parte
           mais complicada de solucionar problemas desta inicialização é que a
           consola gráfica do cliente não emite nenhuma informação até que o
-          Kernel do sistema operativo inicialize. Como resultado, tivemos que
-          fazer toda a solução de problemas através do servidor.
+          Kernel do sistema operativo inicialize. Como resultado, temos de fazer
+          toda a solução de problemas através do servidor.
         </p>
         <div className="flex items-center gap-x-3">
           <span className="rounded-lg bg-rose-400/10 px-1.5 py-1.5 font-mono text-[0.625rem] font-semibold leading-6 text-rose-700 ring-1 ring-inset ring-rose-400 dark:text-rose-500 dark:ring-rose-500/30">
@@ -95,7 +95,7 @@ export default function Phase3() {
       </div>
       <div className="flex flex-col gap-5">
         <h2 className="text-xl font-medium uppercase text-white">
-          Que Fase poderá estar o erro
+          Em Que Fase poderá estar o erro
           <span className="ml-2 text-rose-700">?</span>
         </h2>
         <p>
@@ -130,7 +130,7 @@ export default function Phase3() {
           </li>
           <li>
             Montagem do Sistema Operativo via NFS, nesta fase, o erro pode estar
-            relacionado à montagem do S.O. a partir do servidor NFS ou à
+            relacionado à montagem dos arquivos a partir do servidor NFS ou à
             comunicação com o servidor NFS.
           </li>
           <Infos>

@@ -83,7 +83,7 @@ export default function Phase0() {
           Compreender o Fluxo de Inicialização PXE<span className="text-rose-700 ml-2">.</span>
         </h2>
         <p>
-          Na fluxo de inicialização PXE, as implementações podem variar e os
+          No fluxo de inicialização PXE, as implementações podem variar e os
           componentes do servidor podem estar distribuídos por várias hosts. A
           seguir, explicaremos passo a passo como funciona o fluxo de
           inicialização:
@@ -130,7 +130,7 @@ export default function Phase0() {
           <Questions>
             Trivial File Transfer Protocol ou TFTP é um simples lockstep File
             Transfer Protocol que permite que um cliente obtenha um arquivo ou
-            coloque um arquivo em uma host remota.
+            coloque um arquivo em um host remoto.
           </Questions>
           <li>
             Normalmente, os arquivos descarregados incluem o Kernel e uma imagem
@@ -217,8 +217,8 @@ export default function Phase0() {
             <kbd>`/24 (255.255.255.0)`</kbd>.
           </li>
           <Infos>
-            Pode ajustar este parâmetros como melhor entender, mas toda a
-            documentação assume e leva como base estes mesmos.
+            Pode ajustar estes parâmetros como melhor entender, mas toda a
+            documentação assume e leva como base os mesmos.
           </Infos>
         </ul>
         <hr className="mt-1 h-px border-0 bg-gray-200 dark:bg-gray-600" />

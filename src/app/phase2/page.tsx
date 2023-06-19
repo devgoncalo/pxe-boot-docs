@@ -32,10 +32,10 @@ export default function Phase2() {
           <span className="ml-2 text-rose-700">!</span>
         </h2>
         <p>
-          Agora vamos configurar a Raspberry servidor. Esta é a maquina que vai
-          servir a máquina cliente com os ficheiros necessários para a
-          incialização, como o Kernel e o sistema operativo. Aqui vão algumas
-          notas antes de começar:
+          Agora vamos configurar a Raspberry servidor. Esta é a máquina que vai
+          servir o cliente com os ficheiros necessários para a incialização,
+          como o Kernel e o sistema operativo. Aqui vão algumas notas antes de
+          começar:
         </p>
         <div className="flex items-center gap-x-3">
           <span className="rounded-lg bg-rose-400/10 px-1.5 py-1.5 font-mono text-[0.625rem] font-semibold leading-6 text-rose-700 ring-1 ring-inset ring-rose-400 dark:text-rose-500 dark:ring-rose-500/30">
@@ -61,8 +61,8 @@ export default function Phase2() {
             pacotes necessários.
           </li>
           <li>
-            Mais tarde, nesta fase, vamos removê-lo do acesso à ínternet e
-            conectá-lo diretamente á nossa máquina cliente.
+            Mais tarde, nesta fase, vamos remover o servidor do acesso à
+            internet e conectá-lo diretamente á nossa máquina cliente.
           </li>
         </ul>
         <hr className="mt-5 h-px border-0 bg-gray-200 dark:bg-gray-600" />

@@ -110,8 +110,8 @@ export default function Phase1() {
             Coloque o cartão SD que vai usar com seu Raspberry Pi Cliente.
           </li>
           <li>
-            Selecione a ditribuição Raspbian que deseja, nós usamos a versão
-            gráfica mas recomendamos a Lite devido a ser mais leve.
+            Selecione a ditribuição Raspbian que desejar, nós usamos a versão
+            gráfica mas recomendamos a Lite por ser mais leve.
           </li>
           <li>
             Escolha a unidade de armazenamento que vai escrever a imagem, neste
@@ -199,7 +199,7 @@ export default function Phase1() {
           </li>
           <Code>cp pieeprom-2023-05-11.bin new-pieeprom.bin</Code>
 
-          <li>Extraia a configuração do BotLoader da EEPROM:</li>
+          <li>Extraia a configuração do BootLoader da EEPROM:</li>
           <Code>rpi-eeprom-config new-pieeprom.bin {">"} bootconf.txt</Code>
 
           <li>
@@ -243,7 +243,7 @@ export default function Phase1() {
             rpi-eeprom-config --out netboot-pieeprom.bin --config bootconf.txt
             new-pieeprom.bin
           </Code>
-          <li>Por fim instale o novo BooLoader:</li>
+          <li>Por fim instale o novo BootLoader:</li>
           <Code>sudo rpi-eeprom-update -d -f ./netboot-pieeprom.bin</Code>
           <Warnings>
             Se tiver algum erro com o comando acima, verifique se o `apt-get
@@ -275,19 +275,19 @@ export default function Phase1() {
             <kbd>`rpi-eeprom-update`</kbd> faz isso automaticamente.
           </li>
           <li>
-            Considerando que estamos a usar recursos beta, uma atualização do
-            sistema pode desativar a inicialização PXE na EEPROM. Resentando os
-            valores do BootLoader configurados anteriormente.
+            Considerando o facto que estamos a usar recursos beta, uma
+            atualização do sistema pode resetar os valores do BootLoader
+            configurados anteriormente e desativar a inicialização PXE.
           </li>
           <li>
-            Podemos desativar as atualizações automáticas escondendo o{" "}
+            Podemos desativar as atualizações automáticas "ocultando" o{" "}
             <kbd>`rpi-eeprom-update`</kbd> com o comando <kbd>`systemctl`</kbd>:
           </li>
           <Code>sudo systemctl mask rpi-eeprom-update</Code>
           <li>
             Se mais tarde decidir atualizar manualmente a EEPROM pode executar o
             comando <kbd>`rpi-eeprom-update`</kbd> quando desejar, que a
-            atualização será bem sucessida.
+            atualização será bem sucedida.
           </li>
           <Infos>
             Consulte este{" "}
@@ -309,11 +309,11 @@ export default function Phase1() {
           <span className="ml-2 text-rose-700">!</span>
         </h2>
         <p>
-          Chegamos ao fim da configuralção do cliente, metade do trabalho já
-          está feito. O nosso cliente Raspberry Pi já está configurado e
-          preparado para a inicialização PXE. Mas antes de desligar a RaspBerry,
-          por favor, tome nota do endereço MAC da interface ethernet, veja como
-          pode fazer isso:
+          Chegamos ao fim da configuração do cliente, metade do trabalho já está
+          feito. O nosso cliente Raspberry Pi já está configurado e preparado
+          para a inicialização PXE. Mas antes de desligar a RaspBerry, por
+          favor, tome nota do endereço MAC da interface ethernet, veja como pode
+          fazer isso:
         </p>
         <div className="flex items-center gap-x-3">
           <span className="rounded-lg bg-rose-400/10 px-1.5 py-1.5 font-mono text-[0.625rem] font-semibold leading-6 text-rose-700 ring-1 ring-inset ring-rose-400 dark:text-rose-500 dark:ring-rose-500/30">
@@ -332,9 +332,8 @@ export default function Phase1() {
           </li>
           <Infos>
             O endereço ethernet da placa de rede (MAC) do nosso cliente vai nos
-            ser útil mais tarde, para verificarmos nas logs e não só se
-            efetivamente a Raspberry cliente está a fazer a requisição de rede
-            corretamente.
+            ser útil mais tarde para verificarmos nas logs se efetivamente a
+            Raspberry cliente está a fazer a requisição de rede corretamente.
           </Infos>
           <li>
             Agora desconecte e deixe de lado a sua Raspberry cliente, por
@@ -342,9 +341,9 @@ export default function Phase1() {
             servidor.
           </li>
           <li>
-            Também é um bom momento para remover o cartão SD do cliente, pois
-            não é mais necessário agora que a Raspberry vai inicializar através
-            da rede, após o servidor estár configurado.
+            Remova também o cartão SD do cliente, pois não é mais necessário
+            agora que a Raspberry vai inicializar através da rede, após o
+            servidor estar configurado.
           </li>
         </ul>
         <hr className="mt-5 h-px border-0 bg-gray-200 dark:bg-gray-600" />
