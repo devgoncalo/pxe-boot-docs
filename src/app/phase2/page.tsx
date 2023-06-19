@@ -112,7 +112,7 @@ export default function Phase2() {
           <Questions>
             Network File System é um protocolo de sistema de arquivos, este
             permite que um utilizador em um computador cliente aceda a arquivos
-            através de uma rede de computadores da mesma maneiro que um
+            através de uma rede de computadores da mesma maneira que um
             armazenamento local é acedido.
           </Questions>
           <Code>sudo apt-get install rsync dnsmasq nfs-kernel-server</Code>

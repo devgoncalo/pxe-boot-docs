@@ -29,7 +29,7 @@ export function Hero() {
       </div>
 
       <Link
-        className="group relative w-[10.8rem] cursor-pointer items-center space-x-2 rounded-md bg-gray-700 px-2 py-1.5 text-center text-sm text-gray-50  shadow-none outline-none outline-0 transition duration-200 ease-out focus-visible:outline-4 focus-visible:outline-offset-1 lg:flex"
+        className="group relative w-[10.8rem] cursor-pointer items-center space-x-2 rounded-md bg-gray-200 dark:bg-gray-700 px-2 py-1.5 text-center text-sm text-gray-50 shadow-none outline-none outline-0 transition duration-200 ease-out focus-visible:outline-4 focus-visible:outline-offset-1 lg:flex"
         href="https://github.com/devgoncalo/pxe-boot-docs"
       >
         <div className="flex h-4 w-4 items-center justify-center">
