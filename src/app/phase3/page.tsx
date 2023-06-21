@@ -50,19 +50,22 @@ export default function Phase3() {
             Verifique se o <kbd>`dnsmasq`</kbd> está em execução:
           </li>
           <Code>sudo systemctl status dnsmasq.service</Code>
-          <li>Veja se o servidor NFS e a ligação RPC estão em execução:</li>
+          <li>Veja se a ligação RPC estão em execução:</li>
+          <Code>
+            sudo systemctl status rpcbind.service 
+          </Code>
           <Questions>
             Remote Procedure Call é um mecanismo de comunicação utilizado em
             sistemas Unix, que permitem que um programa em um computador chame
             um procedimento noutro computador, como se estivesse a chamar um
             procedimento local.
           </Questions>
+          <li>Verifique se o servidor Net File System está em execução:</li>
           <Code>
-            sudo systemctl status rpcbind.service sudo systemctl status
-            nfs-mountd.service
+            sudo systemctl status nfs-mountd.service
           </Code>
           <li>
-            Veja as estatísticas do seu servidor NFS, o comando também será útil
+            Veja as estatísticas do servidor NFS, o comando também será útil
             para verificar se o cliente está conectado:
           </li>
           <Code>sudo nfsstat</Code>
