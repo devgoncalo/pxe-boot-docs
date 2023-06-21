@@ -1,6 +1,6 @@
 "use client";
 
-import { Sparkle, Check, ArrowLeft, User } from "@phosphor-icons/react";
+import { Sparkle, Check, ArrowLeft, User, GithubLogo, InstagramLogo, TwitterLogo } from "@phosphor-icons/react";
 
 export default function Phase5() {
   return (
@@ -65,25 +65,52 @@ export default function Phase5() {
           <span className="ml-2 text-rose-700">!</span>
         </h2> 
         <p>
-          Documentar todo este projeto deu-nos muito trabalho, um projeto com esta dimensão e tão abranjente permitiu-nos para além de aprender algo novo, adquirir novos conhecimentos assim como quem nos acompanhou até aqui. Desde do Hardware ao Software até ao desenvolvimento desta documentação foi uma grande experiência que voltariamos a repetir.
+          Documentar todo este projeto deu-nos muito trabalho, um projeto com esta dimensão e tão abranjente permitiu-nos para além de aprender algo novo, adquirir novos conhecimentos assim como quem nos acompanhou até aqui.
         </p>
-        <div className="flex items-center gap-x-3">
-          <span className="rounded-lg bg-rose-400/10 px-1.5 py-1.5 font-mono text-[0.625rem] font-semibold leading-6 text-rose-700 ring-1 ring-inset ring-rose-400 dark:text-rose-500 dark:ring-rose-500/30">
-            <User size={14} />
-          </span>
-          <span className="h-0.5 w-0.5 rounded-full bg-zinc-300 dark:bg-zinc-600"></span>
-          <span className="font-mono text-sm text-zinc-400">
-            /creditos
-          </span>
-        </div>
+        <p>
+          Desde do Hardware ao Software até ao desenvolvimento desta documentação foi uma grande experiência que voltariamos a repetir.
+        </p>
 
-        <ul className="flex list-disc flex-col gap-3 pl-6 text-sm">
-          <li>
-            Gonçalo Pinto Nº7 P2PS
-          </li>
-          <li>Shelton Mavile Nº30 P2PS</li>
-        </ul>
-        <hr className="mt-5 h-px border-0 bg-gray-200 dark:bg-gray-600" />
+        <div className="flex gap-3">
+          <div className="group relative w-full rounded-xl border border-slate-200 dark:border-gray-400">
+            <div className="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.red.500)),var(--quick-links-hover-bg,theme(colors.red.500)))_padding-box,linear-gradient(to_top,theme(colors.rose.900),theme(colors.rose.800),theme(colors.rose.700))_border-box] group-hover:opacity-100 dark:[--quick-links-hover-bg:theme(colors.gray.700)]"></div>
+            <div className="relative overflow-hidden rounded-xl p-6">
+              <h2 className="font-display text-base text-slate-900 dark:text-white">
+                <a href="/phase0">
+                  <span className="absolute -inset-px rounded-xl"></span>
+                  Gonçalo Pinto
+                </a>
+              </h2>
+              <p className="mt-1 text-sm text-slate-700 dark:text-gray-200">
+                Veja o meu perfil do Github!
+              </p>
+              <div className="flex gap-1 mt-2">
+                <a href="#" target="_blank"><GithubLogo size={20} /></a>
+                <a href="#" target="_blank"><InstagramLogo size={20} /></a>
+                <a href="#" target="_blank"><TwitterLogo size={20} /></a>
+              </div>
+            </div>
+          </div>
+          <div className="group relative w-full rounded-xl border border-slate-200 dark:border-gray-400">
+            <div className="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.red.500)),var(--quick-links-hover-bg,theme(colors.red.500)))_padding-box,linear-gradient(to_top,theme(colors.rose.900),theme(colors.rose.800),theme(colors.rose.700))_border-box] group-hover:opacity-100 dark:[--quick-links-hover-bg:theme(colors.gray.700)]"></div>
+            <div className="relative overflow-hidden rounded-xl p-6">
+              <h2 className="font-display text-base text-slate-900 dark:text-white">
+                <a href="/phase0">
+                  <span className="absolute -inset-px rounded-xl"></span>
+                  Shelton Mavile
+                </a>
+              </h2>
+              <p className="mt-1 text-sm text-slate-700 dark:text-gray-200">
+              Veja o meu perfil do Instagram!
+              </p>
+              <div className="flex gap-1 mt-2">
+                <a href="#" target="_blank"><InstagramLogo size={20} /></a>
+                <a href="#" target="_blank"><TwitterLogo size={20} /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr className="mt-5 h-px border-0 bg-gray-200 dark:bg-gray-600 " />
       </div>
       <div className="mb-10 mt-1 flex justify-between">
         <a
