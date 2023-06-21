@@ -7,12 +7,12 @@ import Link from "next/link";
 export function Hero() {
   return (
     <div className="space-y-6 2xl:mt-[8rem] min-[1920px]:mt-[14rem]">
-      <div className="flex items-center gap-3">
+      <a href="/" className="flex items-center gap-3">
         <Image src={raspberryLogo} alt="RaspBerry Logo" className="h-12 w-10" />
         <h1 className="text-3xl font-semibold uppercase text-gray-50">
           RaspBerry Pi
         </h1>
-      </div>
+      </a>
 
       <div className="max-w-[420px]">
         <h1 className="text-3xl font-extralight uppercase leading-tight text-gray-50">
