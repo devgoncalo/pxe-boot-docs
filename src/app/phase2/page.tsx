@@ -222,11 +222,8 @@ export default function Phase2() {
           <span className="ml-2 text-rose-700">.</span>
         </h2>
         <p>
-          O nosso servidor PXE é um servidor DHCP, ou seja, atribui endereços IP
-          e configuração de rede aos clientes que os solicitam. Neste caso, o
-          nosso cliente. Se não quisermos que o próprio servidor de
-          inicialização PXE execute o cliente DHCP, devemos desátiva-lo. Vamos
-          fazer isso agora.
+          O nosso servidor serve DHCP, ou seja, atribui endereços IP e configuração de rede aos clientes que os solicitam. 
+          Desta forma desativamos o DHCP da máquina que está a servir e vamos também atribuir um IP Estático ao servidor.
         </p>
         <div className="flex items-center gap-x-3">
           <span className="rounded-lg bg-rose-400/10 px-1.5 py-1.5 font-mono text-[0.625rem] font-semibold leading-6 text-rose-700 ring-1 ring-inset ring-rose-400 dark:text-rose-500 dark:ring-rose-500/30">
@@ -248,6 +245,9 @@ export default function Phase2() {
             conteúdo:
           </li>
           <Code>
+            sudo nano 10-eth0.netdev
+          </Code>
+          <Code>
             <span className="text-green-600">[Match]</span>
             <br />
             Name=eth0
@@ -262,6 +262,9 @@ export default function Phase2() {
             <kbd>`/etc/systemd/network/11-eth0.network`</kbd> com o seguinte
             conteúdo:
           </li>
+          <Code>
+            sudo nano 11-eth0.network
+          </Code>
           <Code>
             <span className="text-green-600">[Match]</span>
             <br />
