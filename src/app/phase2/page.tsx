@@ -240,8 +240,8 @@ export default function Phase2() {
             cliente DHCP em <kbd>`eth0`</kbd>.
           </li>
           <li>
-            Crie o arquivo no seguinte caminho:{" "}
-            <kbd>`/etc/systemd/network/10-eth0.netdev`</kbd> com o seguinte
+            Crie o arquivo <kbd>`10-eth0.netdev`</kbd> no seguinte caminho:{" "}
+            <kbd>`/etc/systemd/network/`</kbd> com o seguinte
             conteúdo:
           </li>
           <Code>
@@ -256,11 +256,9 @@ export default function Phase2() {
             <br />
             DHCP=no
           </Code>
-
           <li>
-            Crie outro arquivo no seguinte caminho:
-            <kbd>`/etc/systemd/network/11-eth0.network`</kbd> com o seguinte
-            conteúdo:
+            Crie outro arquivo <kbd>`11-eth0.network`</kbd> no seguinte caminho:
+            <kbd>`/etc/systemd/network/`</kbd> com o seguinte conteúdo:
           </li>
           <Code>
             sudo nano 11-eth0.network
@@ -286,7 +284,6 @@ export default function Phase2() {
             Usamos apenas para fim de testes e depuração. Pode deixar o DNS e o
             Gateway de fora, se preferir.
           </Infos>
-
           <li>
             Agora vamos desativar o serviço de cliente <kbd>`dhcp`</kbd>,{" "}
             <kbd>`dhcpcd`</kbd> que é ativado por base no Raspbian.
@@ -305,7 +302,7 @@ export default function Phase2() {
       </div>
       <div className="flex flex-col gap-5">
         <h2 className="text-xl font-medium uppercase text-white">
-          Configuração do DNSMasq do Servidor
+          Configuração do DNSMASQ do Servidor
           <span className="ml-2 text-rose-700">.</span>
         </h2>
         <p>
@@ -378,17 +375,16 @@ export default function Phase2() {
           </li>
           <Code>suno nano /tftpboot/cmdline.txt</Code>
           <li>Substitua o conteúdo do ficheiro para:</li>
+          <Warnings>
+            Tenha especial atenção que o contéudo do ficheiro é escrito em apenas 
+            uma linha certifique-se que digita os parâmetros corretamente em uma e 
+            uma só linha senão poderá originar erros.
+          </Warnings>
           <Code>
             console=serial0,115200 console=tty1 root=/dev/nfs
             nfsroot=192.168.2.100:/nfs/client1,vers=3 rw ip=dhcp rootwait
             elevator=deadline
           </Code>
-
-          <Warnings>
-            A edição acima é feita em apenas uma linha certifique-se que o
-            digita os parâmetros todos corretamente em uma e uma só linha senão
-            poderá originar erros.
-          </Warnings>
         </ul>
         <hr className="mt-5 h-px border-0 bg-gray-200 dark:bg-gray-600" />
       </div>
@@ -433,7 +429,7 @@ export default function Phase2() {
       </div>
       <div className="flex flex-col gap-5">
         <h2 className="text-xl font-medium uppercase text-white">
-          Configurarar o FSTAB para Montar via NFS
+          Configurar o FSTAB para Montar via NFS
           <span className="ml-2 text-rose-700">.</span>
         </h2>
         <p>
@@ -453,13 +449,16 @@ export default function Phase2() {
         </div>
         <ul className="flex list-disc flex-col gap-3 pl-6 text-sm">
           <li>
-            Coloque o seguinte contéudo em <kbd>`/nfs/client1/etc/fstab`</kbd>:
+            Substitua o contéudo do ficheiro <kbd>`/nfs/client1/etc/fstab`</kbd> por:
           </li>
           <Code>
             proc /proc proc defaults 0 0<br />
             192.168.2.100:/tftpboot /boot nfs defaults,vers=3 0 0
           </Code>
-
+          <Warnings>
+            Repare que a primeira linha já está por definição no ficheiro, apenas com mais espaço entre os parâmetros,
+            pode deixar como está e apenas remover todo o seu conteúdo seguinte e susbtituindo pela segunda linha.
+          </Warnings>
           <li>
             Finalmente, habilite e reinicie os serviços relacionados ao NFS:
           </li>
@@ -479,7 +478,7 @@ export default function Phase2() {
             comando `systemctl` para ver se tudo está operacional e sem erros.
           </Checks>
         </ul>
-        <hr className="mt-5 h-px border-0 bg-gray-200 dark:bg-gray-600" />
+        <hr className="mt-2 h-px border-0 bg-gray-200 dark:bg-gray-600" />
       </div>
       <div className="flex flex-col gap-5">
         <h2 className="text-xl font-medium uppercase text-white">
