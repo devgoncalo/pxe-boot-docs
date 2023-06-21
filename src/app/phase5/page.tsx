@@ -76,10 +76,10 @@ export default function Phase5() {
             <div className="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.red.500)),var(--quick-links-hover-bg,theme(colors.red.500)))_padding-box,linear-gradient(to_top,theme(colors.rose.900),theme(colors.rose.800),theme(colors.rose.700))_border-box] group-hover:opacity-100 dark:[--quick-links-hover-bg:theme(colors.gray.700)]"></div>
             <div className="relative overflow-hidden rounded-xl p-6">
               <h2 className="font-display text-base text-slate-900 dark:text-white">
-                <a href="/phase0">
+                <div>
                   <span className="absolute -inset-px rounded-xl"></span>
                   Gonçalo Pinto
-                </a>
+                </div>
               </h2>
               <p className="mt-1 text-sm text-slate-700 dark:text-gray-200">
                 Veja o meu perfil do Github!
@@ -95,10 +95,10 @@ export default function Phase5() {
             <div className="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.red.500)),var(--quick-links-hover-bg,theme(colors.red.500)))_padding-box,linear-gradient(to_top,theme(colors.rose.900),theme(colors.rose.800),theme(colors.rose.700))_border-box] group-hover:opacity-100 dark:[--quick-links-hover-bg:theme(colors.gray.700)]"></div>
             <div className="relative overflow-hidden rounded-xl p-6">
               <h2 className="font-display text-base text-slate-900 dark:text-white">
-                <a href="/phase0">
+                <div>
                   <span className="absolute -inset-px rounded-xl"></span>
                   Shelton Mavile
-                </a>
+                </div>
               </h2>
               <p className="mt-1 text-sm text-slate-700 dark:text-gray-200">
               Veja o meu perfil do Instagram!
