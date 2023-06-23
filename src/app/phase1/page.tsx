@@ -16,6 +16,7 @@ import {
 import Code from "@/components/Code";
 import Warnings from "@/components/Warnings";
 import Infos from "@/components/Infos";
+import Questions from "@/components/Questions";
 
 export default function Phase1() {
   return (
@@ -164,6 +165,19 @@ export default function Phase1() {
         </div>
 
         <ul className="flex list-disc flex-col gap-3 pl-6 text-sm">
+          <li>
+            Os comandos seguintes iram alterar e visualizar propriedades da
+            placa mãe da Raspberry teremos por isso inicar a consola em{" "}
+            <kbd>`sudo bash`</kbd> da seguinte forma:
+          </li>
+          <Code>sudo bash</Code>
+          <Questions>
+            Sudo Bash, é uma solitação de execução do shell bash com permissões
+            elevadas. É útil para executar comandos que exigem privilégios de
+            super-utilizador, como instalação de software ou modificações no
+            sistema. Neste caso sem estar em `sudo bash` o comando `sudo` apenas
+            não iria suprimir as nossas necessidades.
+          </Questions>
           <li>
             Vamos examinar a configuração default do BootLoader, execute este
             comando:
