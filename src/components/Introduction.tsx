@@ -13,10 +13,10 @@ export function Introduction() {
   return (
     <div>
       <header className="mb-6 space-y-2 md:mt-16">
-        <p className="font-display text-sm font-medium text-rose-700">
+        <p className="text-sm font-medium text-rose-700">
           BOAS VINDAS
         </p>
-        <h1 className="font-display text-3xl font-medium text-slate-900 dark:text-gray-50">
+        <h1 className="text-2xl md:text-3xl font-medium text-slate-900 dark:text-gray-50">
           Á NOSSA DOCUMENTAÇÃO
         </h1>
       </header>
