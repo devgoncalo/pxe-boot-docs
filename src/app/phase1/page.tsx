@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import raspImager from "../../assets/rasp-imager.png";
 import {
   ArrowRight,
   X,
@@ -13,6 +11,7 @@ import {
   Notepad,
   WindowsLogo,
 } from "@phosphor-icons/react";
+
 import Code from "@/components/Code";
 import Warnings from "@/components/Warnings";
 import Infos from "@/components/Infos";
@@ -21,10 +20,10 @@ import Questions from "@/components/Questions";
 export default function Phase1() {
   return (
     <>
-      <div className="mt-16 flex flex-col">
+      <div className="flex flex-col md:mt-16">
         <div className="flex items-center gap-3">
           <Desktop size={30} className="mb-0.5 text-rose-700" />
-          <h1 className="text-3xl font-medium text-gray-50">
+          <h1 className="text-xl font-medium text-gray-50 md:text-3xl">
             CONFIGURAÇÃO DO CLIENTE
           </h1>
         </div>

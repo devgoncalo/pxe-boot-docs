@@ -1,9 +1,5 @@
 "use client";
 
-import Code from "@/components/Code";
-import Infos from "@/components/Infos";
-import Questions from "@/components/Questions";
-
 import {
   Wrench,
   Bug,
@@ -13,13 +9,19 @@ import {
   ArrowRight,
 } from "@phosphor-icons/react";
 
+import Code from "@/components/Code";
+import Infos from "@/components/Infos";
+import Questions from "@/components/Questions";
+
 export default function Phase3() {
   return (
     <>
-      <div className="mt-16 flex flex-col">
+      <div className="flex flex-col md:mt-16">
         <div className="flex items-center gap-3">
           <Wrench size={30} className="mb-0.5 text-rose-700" />
-          <h1 className="text-3xl font-medium text-gray-50">TROUBLESHOOTING</h1>
+          <h1 className="text-xl font-medium text-gray-50 md:text-3xl">
+            TROUBLESHOOTING
+          </h1>
         </div>
         <hr className="mt-5 h-px border-0 bg-gray-200 dark:bg-gray-600" />
       </div>
@@ -51,9 +53,7 @@ export default function Phase3() {
           </li>
           <Code>sudo systemctl status dnsmasq.service</Code>
           <li>Veja se a ligação RPC estão em execução:</li>
-          <Code>
-            sudo systemctl status rpcbind.service 
-          </Code>
+          <Code>sudo systemctl status rpcbind.service</Code>
           <Questions>
             Remote Procedure Call é um mecanismo de comunicação utilizado em
             sistemas Unix, que permitem que um programa em um computador chame
@@ -61,9 +61,7 @@ export default function Phase3() {
             procedimento local.
           </Questions>
           <li>Verifique se o servidor Net File System está em execução:</li>
-          <Code>
-            sudo systemctl status nfs-mountd.service
-          </Code>
+          <Code>sudo systemctl status nfs-mountd.service</Code>
           <li>
             Veja as estatísticas do servidor NFS, o comando também será útil
             para verificar se o cliente está conectado:
@@ -294,7 +292,7 @@ export default function Phase3() {
       <div className="mb-10 mt-1 flex justify-between">
         <a
           href="/phase2"
-          className="itens-center inline-flex cursor-pointer justify-center gap-2 overflow-hidden rounded-lg bg-zinc-100 px-3 py-1 text-sm font-medium text-zinc-900 transition hover:bg-zinc-200 dark:bg-zinc-800/40 dark:text-zinc-400 dark:ring-1 dark:ring-inset dark:ring-zinc-800 dark:hover:bg-zinc-800 dark:hover:text-zinc-300"
+          className="itens-center inline-flex cursor-pointer justify-center gap-2 overflow-hidden rounded-lg bg-zinc-100 px-2 py-1 text-sm font-medium text-zinc-900 transition hover:bg-zinc-200 dark:bg-zinc-800/40 dark:text-zinc-400 dark:ring-1 dark:ring-inset dark:ring-zinc-800 dark:hover:bg-zinc-800 dark:hover:text-zinc-300 md:px-3"
         >
           <ArrowLeft className="-mr-1 mt-0.5 h-4 w-4" />
           Configuração do Servidor

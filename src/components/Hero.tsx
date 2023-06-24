@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <div className="space-y-6 2xl:mt-[8rem] min-[1920px]:mt-[14rem]">
+    <div className="mt-[13rem] space-y-6 md:mt-[8rem] min-[1920px]:mt-[14rem]">
       <a href="/" className="flex items-center gap-3">
         <Image src={raspberryLogo} alt="RaspBerry Logo" className="h-12 w-10" />
         <h1 className="text-3xl font-semibold uppercase text-gray-50">
@@ -15,10 +15,10 @@ export function Hero() {
       </a>
 
       <div className="max-w-[420px]">
-        <h1 className="text-3xl font-extralight uppercase leading-tight text-gray-50">
+        <h1 className="text-2xl font-extralight uppercase leading-tight text-gray-50 md:text-3xl">
           Inicializar uma RaspBerry
         </h1>
-        <h2 className="text-3xl font-extralight uppercase leading-tight text-rose-700">
+        <h2 className="text-2xl font-extralight uppercase leading-tight text-rose-700 md:text-3xl">
           Através de uma Rede
         </h2>
         <p className="text-md mt-3 leading-relaxed">
@@ -29,7 +29,7 @@ export function Hero() {
       </div>
 
       <Link
-        className="group relative w-[10.8rem] cursor-pointer items-center space-x-2 rounded-md bg-gray-200 dark:bg-gray-700 px-2 py-1.5 text-center text-sm text-gray-50 shadow-none outline-none outline-0 transition duration-200 ease-out focus-visible:outline-4 focus-visible:outline-offset-1 lg:flex"
+        className="group relative flex w-[10.8rem] cursor-pointer items-center space-x-2 rounded-md bg-gray-200 px-2 py-1.5 text-center text-sm text-gray-50 shadow-none outline-none outline-0 transition duration-200 ease-out focus-visible:outline-4 focus-visible:outline-offset-1 dark:bg-gray-700 lg:flex"
         href="https://github.com/devgoncalo/pxe-boot-docs"
       >
         <div className="flex h-4 w-4 items-center justify-center">

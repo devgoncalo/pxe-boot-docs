@@ -1,16 +1,16 @@
 "use client";
 
-import Questions from "@/components/Questions";
-
 import { Lightbulb, Check, ArrowLeft, ArrowRight } from "@phosphor-icons/react";
+
+import Questions from "@/components/Questions";
 
 export default function Phase4() {
   return (
     <>
-      <div className="mt-16 flex flex-col">
+      <div className="flex flex-col md:mt-16">
         <div className="flex items-center gap-3">
           <Lightbulb size={30} className="mb-0.5 text-rose-700" />
-          <h1 className="text-3xl font-medium text-gray-50">
+          <h1 className="text-xl font-medium text-gray-50 md:text-3xl">
             IDEIAS & AFAZERES
           </h1>
         </div>
@@ -76,11 +76,11 @@ export default function Phase4() {
             pequena.
           </li>
           <Questions>
-            Debootstrap e Multistrap são ferramentas usadas para criar
-            sistemas de arquivos raiz pequenos e personalizados em ambientes
-            Linux. O Debootstrap é mais adequado para criar sistemas para uma
-            única distribuição, enquanto o Multistrap é usado para criar
-            sistemas complexos combinando pacotes de várias distribuições Linux.
+            Debootstrap e Multistrap são ferramentas usadas para criar sistemas
+            de arquivos raiz pequenos e personalizados em ambientes Linux. O
+            Debootstrap é mais adequado para criar sistemas para uma única
+            distribuição, enquanto o Multistrap é usado para criar sistemas
+            complexos combinando pacotes de várias distribuições Linux.
           </Questions>
           <li>
             Atualmente, temos uma configuração de cliente único. Queremos criar

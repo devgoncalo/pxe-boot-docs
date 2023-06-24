@@ -1,14 +1,21 @@
 "use client";
 
-import { Sparkle, Check, ArrowLeft, User, GithubLogo, InstagramLogo, TwitterLogo } from "@phosphor-icons/react";
+import {
+  Sparkle,
+  Check,
+  ArrowLeft,
+  GithubLogo,
+  InstagramLogo,
+  TwitterLogo,
+} from "@phosphor-icons/react";
 
 export default function Phase5() {
   return (
     <>
-      <div className="mt-16 flex flex-col">
+      <div className="flex flex-col md:mt-16">
         <div className="flex items-center gap-3">
           <Sparkle size={30} className="mb-0.5 text-rose-700" />
-          <h1 className="text-3xl font-medium text-gray-50">
+          <h1 className="text-2xl font-medium text-gray-50 md:text-3xl">
             FEEDBACK & CONCLUSÃO
           </h1>
         </div>
@@ -63,15 +70,19 @@ export default function Phase5() {
         <h2 className="text-xl font-medium uppercase text-white">
           Conclusão e Créditos
           <span className="ml-2 text-rose-700">!</span>
-        </h2> 
+        </h2>
         <p>
-          Documentar todo este projeto deu-nos muito trabalho, um projeto com esta dimensão e tão abranjente permitiu-nos para além de aprender algo novo, adquirir novos conhecimentos assim como quem nos acompanhou até aqui.
+          Documentar todo este projeto deu-nos muito trabalho, um projeto com
+          esta dimensão e tão abranjente permitiu-nos para além de aprender algo
+          novo, adquirir novos conhecimentos assim como quem nos acompanhou até
+          aqui.
         </p>
         <p>
-          Desde do Hardware ao Software até ao desenvolvimento desta documentação foi uma grande experiência que voltariamos a repetir.
+          Desde do Hardware ao Software até ao desenvolvimento desta
+          documentação foi uma grande experiência que voltariamos a repetir.
         </p>
 
-        <div className="flex gap-3">
+        <div className="flex flex-col gap-3 md:flex-row">
           <div className="group relative w-full rounded-xl border border-slate-200 dark:border-gray-400">
             <div className="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.red.500)),var(--quick-links-hover-bg,theme(colors.red.500)))_padding-box,linear-gradient(to_top,theme(colors.rose.900),theme(colors.rose.800),theme(colors.rose.700))_border-box] group-hover:opacity-100 dark:[--quick-links-hover-bg:theme(colors.gray.700)]"></div>
             <div className="relative overflow-hidden rounded-xl p-6">
@@ -84,10 +95,16 @@ export default function Phase5() {
               <p className="mt-1 text-sm text-slate-700 dark:text-gray-200">
                 Veja o meu perfil do Github!
               </p>
-              <div className="flex gap-1 mt-2">
-                <a href="#" target="_blank"><GithubLogo size={20} /></a>
-                <a href="#" target="_blank"><InstagramLogo size={20} /></a>
-                <a href="#" target="_blank"><TwitterLogo size={20} /></a>
+              <div className="mt-2 flex gap-1">
+                <a href="#" target="_blank">
+                  <GithubLogo size={20} />
+                </a>
+                <a href="#" target="_blank">
+                  <InstagramLogo size={20} />
+                </a>
+                <a href="#" target="_blank">
+                  <TwitterLogo size={20} />
+                </a>
               </div>
             </div>
           </div>
@@ -101,11 +118,15 @@ export default function Phase5() {
                 </div>
               </h2>
               <p className="mt-1 text-sm text-slate-700 dark:text-gray-200">
-              Veja o meu perfil do Instagram!
+                Veja o meu perfil do Instagram!
               </p>
-              <div className="flex gap-1 mt-2">
-                <a href="#" target="_blank"><InstagramLogo size={20} /></a>
-                <a href="#" target="_blank"><TwitterLogo size={20} /></a>
+              <div className="mt-2 flex gap-1">
+                <a href="#" target="_blank">
+                  <InstagramLogo size={20} />
+                </a>
+                <a href="#" target="_blank">
+                  <TwitterLogo size={20} />
+                </a>
               </div>
             </div>
           </div>

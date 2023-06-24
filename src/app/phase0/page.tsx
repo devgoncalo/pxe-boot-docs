@@ -1,8 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import fluxo from "../../assets/fluxo.png";
-
 import {
   ArrowRight,
   Check,
@@ -16,19 +13,25 @@ import {
 import Questions from "@/components/Questions";
 import Infos from "@/components/Infos";
 
+import Image from "next/image";
+import fluxo from "../../assets/fluxo.png";
+
 export default function Phase0() {
   return (
     <>
-      <div className="mt-16 flex flex-col">
+      <div className="flex flex-col md:mt-16">
         <div className="flex items-center gap-3">
-          <NavigationArrow size={30} className="text-rose-700 mb-0.5" />
-          <h1 className="text-3xl font-medium text-gray-50">INTRODUÇÃO</h1>
+          <NavigationArrow size={30} className="mb-0.5 text-rose-700" />
+          <h1 className="text-xl font-medium text-gray-50 md:text-3xl">
+            INTRODUÇÃO
+          </h1>
         </div>
         <hr className="mt-5 h-px border-0 bg-gray-200 dark:bg-gray-600" />
       </div>
       <div className="flex flex-col gap-5">
         <h2 className="text-xl font-medium uppercase text-white">
-          O que é Preboot Execution Environment<span className="text-rose-700 ml-2">?</span>
+          O que é Preboot Execution Environment
+          <span className="ml-2 text-rose-700">?</span>
         </h2>
         <p>
           Para começar, vamos fornecer uma visão geral básica do PXE (Preboot
@@ -45,10 +48,10 @@ export default function Phase0() {
           .
         </p>
         <p>
-          O PXE é um padrão de inicialização de rede que permite o arranque de um
-          computador através da rede utilizando protocolos comuns, como IP, UDP,
-          DHCP e TFTP. Ele é amplamente utilizado em diversos cenários, tais
-          como:
+          O PXE é um padrão de inicialização de rede que permite o arranque de
+          um computador através da rede utilizando protocolos comuns, como IP,
+          UDP, DHCP e TFTP. Ele é amplamente utilizado em diversos cenários,
+          tais como:
         </p>
         <div className="flex items-center gap-x-3">
           <span className="rounded-lg bg-rose-400/10 px-1.5 py-1.5 font-mono text-[0.625rem] font-semibold leading-6 text-rose-700 ring-1 ring-inset ring-rose-400 dark:text-rose-500 dark:ring-rose-500/30">
@@ -80,7 +83,8 @@ export default function Phase0() {
       </div>
       <div className="flex flex-col gap-5">
         <h2 className="text-xl font-medium uppercase text-white">
-          Compreender o Fluxo de Inicialização PXE<span className="text-rose-700 ml-2">.</span>
+          Compreender o Fluxo de Inicialização PXE
+          <span className="ml-2 text-rose-700">.</span>
         </h2>
         <p>
           No fluxo de inicialização PXE, as implementações podem variar e os
@@ -88,11 +92,7 @@ export default function Phase0() {
           seguir, explicaremos passo a passo como funciona o fluxo de
           inicialização:
         </p>
-        <Image
-          src={fluxo}
-          alt="Fluxo do PXE"
-          className="rounded-xl"
-        />
+        <Image src={fluxo} alt="Fluxo do PXE" className="rounded-xl" />
         <div className="flex items-center gap-x-3">
           <span className="rounded-lg bg-rose-400/10 px-1.5 py-1.5 font-mono text-[0.625rem] font-semibold leading-6 text-rose-700 ring-1 ring-inset ring-rose-400 dark:text-rose-500 dark:ring-rose-500/30">
             <Footprints size={14} />
@@ -151,7 +151,8 @@ export default function Phase0() {
       </div>
       <div className="flex flex-col gap-5">
         <h2 className="text-xl font-medium uppercase text-white">
-          Lista de Material e Alguns Pressupostos<span className="text-rose-700 ml-2">.</span>
+          Lista de Material e Alguns Pressupostos
+          <span className="ml-2 text-rose-700">.</span>
         </h2>
         <p>
           Estamos prestes a começar antes vamos apenas listar os materiais que
@@ -209,7 +210,7 @@ export default function Phase0() {
           </li>
           <li>
             Teremos o seguinte endereço IP de rede para a sua Raspberry
-            Servidor: <kbd>`192.168.2.100`</kbd>, o cliente depois irá receberá       
+            Servidor: <kbd>`192.168.2.100`</kbd>, o cliente depois irá receberá
             um endereço IP via DHCP.
           </li>
           <li>

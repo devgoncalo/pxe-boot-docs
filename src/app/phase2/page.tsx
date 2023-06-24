@@ -8,6 +8,7 @@ import {
   HardDrives,
   Footprints,
 } from "@phosphor-icons/react";
+
 import Code from "@/components/Code";
 import Warnings from "@/components/Warnings";
 import Questions from "@/components/Questions";
@@ -17,10 +18,10 @@ import Checks from "@/components/Checks";
 export default function Phase2() {
   return (
     <>
-      <div className="mt-16 flex flex-col">
+      <div className="flex flex-col md:mt-16">
         <div className="flex items-center gap-3">
           <HardDrives size={30} className="mb-0.5 text-rose-700" />
-          <h1 className="text-3xl font-medium text-gray-50">
+          <h1 className="text-xl font-medium text-gray-50 md:text-3xl">
             CONFIGURAÇÃO DO SERVIDOR
           </h1>
         </div>
@@ -222,8 +223,10 @@ export default function Phase2() {
           <span className="ml-2 text-rose-700">.</span>
         </h2>
         <p>
-          O nosso servidor serve DHCP, ou seja, atribui endereços IP e configuração de rede aos clientes que os solicitam. 
-          Desta forma desativamos o DHCP da máquina que está a servir e vamos também atribuir um IP Estático ao servidor.
+          O nosso servidor serve DHCP, ou seja, atribui endereços IP e
+          configuração de rede aos clientes que os solicitam. Desta forma
+          desativamos o DHCP da máquina que está a servir e vamos também
+          atribuir um IP Estático ao servidor.
         </p>
         <div className="flex items-center gap-x-3">
           <span className="rounded-lg bg-rose-400/10 px-1.5 py-1.5 font-mono text-[0.625rem] font-semibold leading-6 text-rose-700 ring-1 ring-inset ring-rose-400 dark:text-rose-500 dark:ring-rose-500/30">
@@ -241,12 +244,9 @@ export default function Phase2() {
           </li>
           <li>
             Crie o arquivo <kbd>`10-eth0.netdev`</kbd> no seguinte caminho:{" "}
-            <kbd>`/etc/systemd/network/`</kbd> com o seguinte
-            conteúdo:
+            <kbd>`/etc/systemd/network/`</kbd> com o seguinte conteúdo:
           </li>
-          <Code>
-            sudo nano 10-eth0.netdev
-          </Code>
+          <Code>sudo nano 10-eth0.netdev</Code>
           <Code>
             <span className="text-green-600">[Match]</span>
             <br />
@@ -260,9 +260,7 @@ export default function Phase2() {
             Crie outro arquivo <kbd>`11-eth0.network`</kbd> no seguinte caminho:
             <kbd>`/etc/systemd/network/`</kbd> com o seguinte conteúdo:
           </li>
-          <Code>
-            sudo nano 11-eth0.network
-          </Code>
+          <Code>sudo nano 11-eth0.network</Code>
           <Code>
             <span className="text-green-600">[Match]</span>
             <br />
@@ -376,9 +374,9 @@ export default function Phase2() {
           <Code>suno nano /tftpboot/cmdline.txt</Code>
           <li>Substitua o conteúdo do ficheiro para:</li>
           <Warnings>
-            Tenha especial atenção que o contéudo do ficheiro é escrito em apenas 
-            uma linha certifique-se que digita os parâmetros corretamente em uma e 
-            uma só linha senão poderá originar erros.
+            Tenha especial atenção que o contéudo do ficheiro é escrito em
+            apenas uma linha certifique-se que digita os parâmetros corretamente
+            em uma e uma só linha senão poderá originar erros.
           </Warnings>
           <Code>
             console=serial0,115200 console=tty1 root=/dev/nfs
@@ -449,15 +447,18 @@ export default function Phase2() {
         </div>
         <ul className="flex list-disc flex-col gap-3 pl-6 text-sm">
           <li>
-            Substitua o contéudo do ficheiro <kbd>`/nfs/client1/etc/fstab`</kbd> por:
+            Substitua o contéudo do ficheiro <kbd>`/nfs/client1/etc/fstab`</kbd>{" "}
+            por:
           </li>
           <Code>
             proc /proc proc defaults 0 0<br />
             192.168.2.100:/tftpboot /boot nfs defaults,vers=3 0 0
           </Code>
           <Warnings>
-            Repare que a primeira linha já está por definição no ficheiro, apenas com mais espaço entre os parâmetros,
-            pode deixar como está e apenas remover todo o seu conteúdo seguinte e susbtituindo pela segunda linha.
+            Repare que a primeira linha já está por definição no ficheiro,
+            apenas com mais espaço entre os parâmetros, pode deixar como está e
+            apenas remover todo o seu conteúdo seguinte e susbtituindo pela
+            segunda linha.
           </Warnings>
           <li>
             Finalmente, habilite e reinicie os serviços relacionados ao NFS:

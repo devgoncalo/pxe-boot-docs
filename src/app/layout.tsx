@@ -17,11 +17,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="dark">
       <body
-        className={`${roboto.variable} flex bg-gray-100 dark:bg-gray-900 font-sans text-gray-900 dark:text-gray-100`}
+        className={`${roboto.variable} flex flex-col md:flex-row bg-gray-100 dark:bg-gray-900 font-sans text-gray-900 dark:text-gray-100`}
       >
-        <div className="h-[100vh] w-1/2 ">
+        <div className="md:h-[100vh] w-full md:w-1/2">
           {/* Left */}
-          <div className="relative flex h-screen flex-col items-center justify-between overflow-hidden border-r border-white/10 bg-[url(../assets/bg-stars.svg)] bg-cover px-28 py-16">
+          <div className="relative flex h-screen flex-col items-center justify-between overflow-hidden border-r border-white/10 bg-[url(../assets/bg-stars.svg)] bg-cover px-8 md:px-28 py-16">
             {/* Blur */}
             <div className="absolute right-0 top-1/2 h-[288px] w-[526px] -translate-y-1/2 translate-x-1/2 rounded-full bg-rose-700 opacity-50 blur-full" />
 
@@ -34,9 +34,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         </div>
 
         {/* Right */}
-        <div className="h-[100vh] w-1/2 overflow-y-auto">
+        <div className="h-[100vh] w-full md:w-1/2 md:overflow-y-auto">
           <div className="flex flex-col items-center bg-[url(../assets/bg-stars.svg)] bg-cover">
-            <div className="mt-10 w-[600px] flex flex-col gap-10 justify-center overflow-x-hidden">
+            <div className="mt-10 w-[350px] md:w-[600px] flex flex-col gap-10 justify-center overflow-x-hidden">
               {children}
             </div>
           </div>
